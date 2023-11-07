@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { SaleProduct } from 'src/app/model/product/sale/saleproduct';
 import { CommentService } from 'src/app/service/comment-service/comment-service.service';
+import { SaleproductService } from 'src/app/service/sale-service/saleproduct.service';
+
 
 @Component({
   selector: 'app-comment',
@@ -10,6 +13,7 @@ import { CommentService } from 'src/app/service/comment-service/comment-service.
 })
 export class CommentComponent implements OnInit {
   cmtList: Comment[] = []
+  saleList: SaleProduct[] = []
   users: any
   commentForm: FormGroup;
   today: any = Date.now();
@@ -18,18 +22,44 @@ export class CommentComponent implements OnInit {
 
   constructor(
     private commentService: CommentService,
+    private saleService: SaleproductService,
+    private formBuild: FormBuilder,
     private active: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.commentService.GetAll().subscribe(data => {
-      this.cmtList = data
-    })
-
     this.active.paramMap.subscribe(data => {
       this.users = data.get('id')
     })
 
+    this.commentService.GetAll().subscribe(data => {
+      this.cmtList = data
+    })
+
+    this.saleService.getAllSale().subscribe(data => {
+      this.saleList = data
+    })
+
+    this.commentForm = new FormGroup(
+      {
+        userId: new FormControl(this.users, [Validators.required]),
+        vote: new FormControl('', [Validators.required]),
+        dateTime: new FormControl(this.today, [Validators.required]),
+        content: new FormControl('', [Validators.required]),
+      }
+    )
+  }
+
+
+  submit() {
+    this.commentService.AddNewComment(this.commentForm.value).subscribe(data => {
+      this.ngOnInit()
+    })
+  }
+
+  getStarArray(vote: string): any[] {
+    const numStars = parseInt(vote);
+    return new Array(numStars);
   }
 
 

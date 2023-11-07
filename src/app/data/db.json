@@ -898,11 +898,36 @@
   ],
   "comment": [
     {
-      "id": 1,
       "userId": "baokx12",
-      "vote": "5",
-      "dateTime": "1",
-      "content": "Đã mua hàng của rất nhiều shop khác nhau nhưng shop là mình thấy ưng ý nhất, sản phẩm đẹp shop lại rất thân thiện, tư vấn rất nhiệt tình. mình hơi kĩ tính nên hỏi shop hơi nhiều nhưngg shop rất thân thiện tư vấn mẫu cho mình, đặt mẫu nào về nhận hàng cũng đều rất hợp rất đúng ý mình luôn..😘😘😘😘😘"
+      "productId": "3",
+      "vote": "1",
+      "dateTime": 1699380705838,
+      "content": "Đẹp lắm mng",
+      "id": 1
+    },
+    {
+      "userId": "baokx12",
+      "productId": "3",
+      "vote": "1",
+      "dateTime": 1699380705839,
+      "content": "Mua ngay mua ngay nào mng\n",
+      "id": 2
+    },
+    {
+      "userId": "baokx12",
+      "productId": "2",
+      "vote": "1",
+      "dateTime": 1699380912192,
+      "content": "rẻ rẻ",
+      "id": 3
+    },
+    {
+      "userId": "Jhon1",
+      "productId": "1",
+      "vote": "1",
+      "dateTime": 1699381006995,
+      "content": "bbbb",
+      "id": 4
     }
   ]
 }

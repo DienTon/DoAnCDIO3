@@ -3,40 +3,50 @@
   Launch demo modal
 </button>
 
-<!-- COMMENT -->
-<div class="comment-container">
-  <div class="comment-content">
-    <h4 style="margin: 0;">Trung baor</h4>
-    <div class="rating">
-      <input value="5" name="rating" id="star5" type="radio">
-      <label for="star5"></label>
-      <input value="4" name="rating" id="star4" type="radio">
-      <label for="star4"></label>
-      <input value="3" name="rating" id="star3" type="radio">
-      <label for="star3"></label>
-      <input value="2" name="rating" id="star2" type="radio">
-      <label for="star2"></label>
-      <input value="1" name="rating" id="star1" type="radio">
-      <label for="star1"></label>
+<!-- Modal -->
+<div class="modal fade" id="addCmt" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Đánh Giá Sản Phẩm</h1>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="commentForm" (ngSubmit)="submit()" class="d-flex flex-column">
+          <div class="rating">
+            <input formControlName="vote" value="1" id="1" type="radio">
+            <label for="1"></label>
+            <input formControlName="vote" value="2" id="2" type="radio">
+            <label for="2"></label>
+            <input formControlName="vote" value="3" id="3" type="radio">
+            <label for="3"></label>
+            <input formControlName="vote" value="4" id="4" type="radio">
+            <label for="4"></label>
+            <input formControlName="vote" value="5" id="5" type="radio">
+            <label for="5"></label>
+          </div>
+          <textarea formControlName="content" placeholder="Nhận Xét Của Bạn" cols="30" rows="10"></textarea>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Xác Nhận</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+          </div>
+        </form>
+      </div>
     </div>
-    <div class="d-flex date">
-      <p>June, 25 2003 </p>
-      <p> | Size: 36</p>
-    </div>
-    <p>Đã mua hàng của rất nhiều shop khác nhau nhưng shop là mình thấy ưng ý nhất, sản phẩm đẹp shop lại rất thân
-      thiện, tư vấn rất nhiệt tình. mình hơi kĩ tính nên hỏi shop hơi nhiều nhưngg shop rất thân thiện tư vấn mẫu
-      cho mình, đặt mẫu nào về nhận hàng cũng đều rất hợp rất đúng ý mình luôn..😘😘😘😘😘</p>
   </div>
 </div>
 
+<!-- COMMENT -->
 <div class="comment-container">
   <div class="comment-content" *ngFor="let item of cmtList">
-    <h4 style="margin: 0;">{{item.userId}}</h4>
-    <div class="rating">
-      <input [value]="item.vote" name="rating" id="star{{item.vote}}" type="radio" checked>
-      <label for="star{{item.vote}}"></label>
+    <div *ngFor="let check of saleList">
+      <div *ngIf="item.productId == check.id">
+        <h4 style="margin: 0;">{{ item.userId }}</h4>
+        <div class="rating" *ngFor="let star of getStarArray(item.vote)" style="margin: 0;">
+          <i class="fa fa-star d-flex"></i>
+        </div>
+        <p style="color: rgb(130, 128, 128); font-size: 14px;">{{ item.dateTime | date: 'medium' }}</p>
+        <p>{{ item.content }}</p>
+      </div>
     </div>
-    <p style="color: rgb(130, 128, 128);font-size: 14px;">{{today | date:'medium'}}</p>
-    <p>{{item.content}}</p>
   </div>
 </div>
