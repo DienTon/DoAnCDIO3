@@ -1,0 +1,42 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCmt">
+  Launch demo modal
+</button>
+
+<!-- COMMENT -->
+<div class="comment-container">
+  <div class="comment-content">
+    <h4 style="margin: 0;">Trung baor</h4>
+    <div class="rating">
+      <input value="5" name="rating" id="star5" type="radio">
+      <label for="star5"></label>
+      <input value="4" name="rating" id="star4" type="radio">
+      <label for="star4"></label>
+      <input value="3" name="rating" id="star3" type="radio">
+      <label for="star3"></label>
+      <input value="2" name="rating" id="star2" type="radio">
+      <label for="star2"></label>
+      <input value="1" name="rating" id="star1" type="radio">
+      <label for="star1"></label>
+    </div>
+    <div class="d-flex date">
+      <p>June, 25 2003 </p>
+      <p> | Size: 36</p>
+    </div>
+    <p>Đã mua hàng của rất nhiều shop khác nhau nhưng shop là mình thấy ưng ý nhất, sản phẩm đẹp shop lại rất thân
+      thiện, tư vấn rất nhiệt tình. mình hơi kĩ tính nên hỏi shop hơi nhiều nhưngg shop rất thân thiện tư vấn mẫu
+      cho mình, đặt mẫu nào về nhận hàng cũng đều rất hợp rất đúng ý mình luôn..😘😘😘😘😘</p>
+  </div>
+</div>
+
+<div class="comment-container">
+  <div class="comment-content" *ngFor="let item of cmtList">
+    <h4 style="margin: 0;">{{item.userId}}</h4>
+    <div class="rating">
+      <input [value]="item.vote" name="rating" id="star{{item.vote}}" type="radio" checked>
+      <label for="star{{item.vote}}"></label>
+    </div>
+    <p style="color: rgb(130, 128, 128);font-size: 14px;">{{today | date:'medium'}}</p>
+    <p>{{item.content}}</p>
+  </div>
+</div>

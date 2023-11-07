@@ -1,0 +1,908 @@
+{
+  "user": [
+    {
+      "id": "admin",
+      "firstname": "Nathan",
+      "name": "NT Infotech",
+      "password": "Baokx12@",
+      "email": "test@gmail.com",
+      "role": "admin",
+      "isactive": true,
+      "address": {
+        "area": "chennai"
+      }
+    },
+    {
+      "id": "testuser",
+      "firstname": "Nathan",
+      "name": "Test User",
+      "password": "Baokx12@",
+      "email": "test@in.com",
+      "role": "user",
+      "isactive": false
+    },
+    {
+      "id": "Jhon1",
+      "firstname": "Nathan",
+      "name": "NT Infotech",
+      "password": "Baokx12@",
+      "email": "te@in.com",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "ntuser",
+      "firstname": "Nathan",
+      "name": "ramesh",
+      "password": "Baokx12@",
+      "email": "te@in.com",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "baokx12",
+      "firstname": "Nguyễn ",
+      "name": "Trung Bảo",
+      "password": "Baokx12@",
+      "email": "baokx12@gmail.com",
+      "role": "admin",
+      "isactive": true
+    },
+    {
+      "id": "baobaokxkx",
+      "firstname": "sadasdas",
+      "name": "asdasda",
+      "password": "Baokx12@",
+      "email": "asdasda@gmail.com",
+      "role": "user",
+      "isactive": false
+    },
+    {
+      "id": "isisisis",
+      "firstname": "Nguyeenx ",
+      "name": "six",
+      "password": "Baokx12@",
+      "email": "asdasdas@gmail.com",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "bao12221212",
+      "firstname": "Nguyeenx ",
+      "name": "ccc",
+      "password": "Baokx12@",
+      "email": "asdasdxxas@gmail.com",
+      "role": "user",
+      "isactive": false
+    },
+    {
+      "id": "sixomdokx",
+      "firstname": "Đỗ",
+      "name": "Thanh Sĩ",
+      "password": "Baokx12@",
+      "email": "sixomdo@gmail.com",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "namkx12",
+      "firstname": "nam",
+      "name": "nam",
+      "password": "Namkx12@",
+      "email": "namkxkxk@gmail.com",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "namkx31",
+      "firstname": "nam",
+      "name": "nâmmama",
+      "password": "Baokx12@",
+      "email": "1231@gmail.xom",
+      "role": "user",
+      "isactive": true
+    }
+  ],
+  "role": [
+    {
+      "code": "admin",
+      "name": "Admin"
+    },
+    {
+      "code": "user",
+      "name": "User"
+    }
+  ],
+  "menu": [
+    {
+      "code": "user",
+      "name": "User"
+    },
+    {
+      "code": "customer",
+      "name": "Customer"
+    }
+  ],
+  "roleaccess": [
+    {
+      "role": "admin",
+      "menu": "user",
+      "haveedit": true,
+      "haveadd": true,
+      "havedelete": true
+    },
+    {
+      "role": "admin",
+      "menu": "customer",
+      "haveedit": true,
+      "haveadd": true,
+      "havedelete": true
+    },
+    {
+      "role": "user",
+      "menu": "user",
+      "haveedit": false,
+      "haveadd": false,
+      "havedelete": false
+    },
+    {
+      "role": "user",
+      "menu": "customer",
+      "haveedit": true,
+      "haveadd": true,
+      "havedelete": false
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "name": "rakhesh",
+      "Creditlimit": 1000
+    },
+    {
+      "id": 2,
+      "name": "rahul",
+      "Creditlimit": 1000
+    },
+    {
+      "id": 3,
+      "name": "ramesh",
+      "Creditlimit": 1000
+    },
+    {
+      "id": 4,
+      "name": "rahim",
+      "Creditlimit": 1000
+    },
+    {
+      "id": 5,
+      "name": "robert",
+      "Creditlimit": 1000
+    }
+  ],
+  "saleproduct": [
+    {
+      "id": 1,
+      "nameSaleProduct": "Nike Air Force 1 '07",
+      "imgSale": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0453f3b6-c33b-44a6-bd68-3732ac2b8bf2/air-force-1-07-shoes-g6nj1f.png",
+      "imgSub1": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/794983c3-2ed3-4e5e-af3c-2766fb3b478f/air-force-1-07-shoes-g6nj1f.png",
+      "imgSub2": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3811255b-206e-4fd2-9477-1739c97ecc80/air-force-1-07-shoes-g6nj1f.png",
+      "imgSub3": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ec1b2edd-f40a-4c5f-a37c-92450f4c1b23/air-force-1-07-shoes-g6nj1f.png",
+      "imgSub4": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0a28af24-3605-48df-ad46-64abe9efe07d/air-force-1-07-shoes-g6nj1f.png",
+      "cost": 3239000,
+      "priceSale": 2753149,
+      "percentSale": 15,
+      "describe": "Sự rạng rỡ vẫn tồn tại trong AF-1 '07. Bản gốc b-ball này tạo ra một vòng quay mới cho những gì bạn biết rõ nhất: lớp phủ khâu bền, da sắc nét và lượng gingham hoàn hảo để làm cho vẻ ngoài của bạn nổi bật."
+    },
+    {
+      "id": 2,
+      "nameSaleProduct": "Nike Air Force 1 Shadow",
+      "imgSale": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e7f621f8-d62e-481c-9ca5-66c961d055df/air-force-1-shadow-shoes-3d774m.png",
+      "imgSub1": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/98bca6fd-f306-4bfc-b1dd-ab3b1c89a12b/air-force-1-shadow-shoes-3d774m.png",
+      "imgSub2": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/533e887f-0cc9-40ef-894b-877cca085fca/air-force-1-shadow-shoes-3d774m.png",
+      "imgSub3": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/34d34ac4-0e78-4743-8e3d-6a09e8773a32/air-force-1-shadow-shoes-3d774m.png",
+      "imgSub4": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a024ea3a-ae03-46bd-a204-bbda9a0104e8/air-force-1-shadow-shoes-3d774m.png",
+      "cost": 3829000,
+      "priceSale": 3254649,
+      "percentSale": 15,
+      "describe": "Mọi thứ bạn yêu thích về AF-1 - nhưng tăng gấp đôi! Air Force 1 Shadow đặt một bước ngoặt vui tươi trên biểu tượng vòng để làm nổi bật những gì tốt nhất của DNA AF-1. Với 2 mắt, 2 tấm chắn bùn, 2 tấm nền và 2 logo Swoosh, bạn sẽ có được một cái nhìn nhiều lớp với thương hiệu gấp đôi."
+    },
+    {
+      "id": 3,
+      "nameSaleProduct": "Nike Venture Runner",
+      "imgSale": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0edfef4d-ac89-472a-a956-fef1b1f7a989/venture-runner-shoe-Xlxvlj.png",
+      "imgSub1": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/be632c2b-7db1-4895-9310-fd60e76819e9/venture-runner-shoe-Xlxvlj.png",
+      "imgSub2": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f6886506-8063-4b82-a531-c07d4047dd27/venture-runner-shoe-Xlxvlj.png",
+      "imgSub3": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/bc69f652-991e-4f9a-9ec5-57edbfc6159e/venture-runner-shoe-Xlxvlj.png",
+      "imgSub4": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a6320e57-8c82-452c-84ab-843e5732db84/venture-runner-shoe-Xlxvlj.png",
+      "cost": 2069000,
+      "priceSale": 1758649,
+      "percentSale": 15,
+      "describe": "Nike Venture Runner gật đầu với đôi giày mang tính biểu tượng của thập niên 80 đã bắt đầu cuộc cách mạng chạy bộ. Đường khâu lộ ra, phần trên có độ linh hoạt cao và kẹp gót chân có thương hiệu siêu nhỏ tạo thêm DNA mới cho vẻ ngoài thể thao cổ điển, trong khi lưới thoáng mát và đế trong mềm mại mới của nó nâng cao cảm giác."
+    },
+    {
+      "id": 4,
+      "nameSaleProduct": "Nike Dunk Low Retro",
+      "imgSale": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4f8049c6-d329-4907-905b-df905c3da623/dunk-low-retro-shoes-Q2Gtpp.png",
+      "imgSub1": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/feec8a9d-c615-44a8-84cc-ac00af01b567/dunk-low-retro-shoes-Q2Gtpp.png",
+      "imgSub2": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/89640faf-0f19-4ab1-87c0-31f95e6d28a8/dunk-low-retro-shoes-Q2Gtpp.png",
+      "imgSub3": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/543c19bf-83e5-4d98-9469-4bc0fc348fe0/dunk-low-retro-shoes-Q2Gtpp.png",
+      "imgSub4": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fce11918-901a-485d-957e-713145427f83/dunk-low-retro-shoes-Q2Gtpp.png",
+      "cost": 2929000,
+      "priceSale": 2489649,
+      "percentSale": 15,
+      "describe": "Được tạo ra cho gỗ cứng nhưng được đưa ra đường, biểu tượng bóng rổ trở lại với các chi tiết cổ điển và sự tinh tế của vòng ném lại. Kênh những rung cảm của thập niên 80, cổ áo có đệm, cắt thấp cho phép bạn mang trò chơi của mình đến bất cứ đâu — một cách thoải mái."
+    },
+    {
+      "id": 5,
+      "nameSaleProduct": "Nike Air Force 1 '07",
+      "imgSale": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a035d0f5-c6f1-4011-b6f5-6da994406b86/air-force-1-07-shoes-G4VDWz.png",
+      "imgSub1": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/afa8fb30-595c-44fc-ac8b-f2eae42ac387/air-force-1-07-shoes-G4VDWz.png",
+      "imgSub2": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1a3f8a0a-cdb8-4a2d-b779-428f1032a01d/air-force-1-07-shoes-G4VDWz.png",
+      "imgSub3": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/25f79a0c-6b95-4bf8-b09d-baf7c742fcd2/air-force-1-07-shoes-G4VDWz.png",
+      "imgSub4": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9c4ddb9c-d819-45d7-a977-a5ee99a02831/air-force-1-07-shoes-G4VDWz.png",
+      "cost": 3239000,
+      "priceSale": 2753149,
+      "percentSale": 15,
+      "describe": "Sự rạng rỡ sống mãi trong AF-1 '07, mang đến cho bạn phong cách vượt thời gian dễ mặc. Da bền mang lại cho những đôi giày thể thao này một cảm giác cổ điển trong khi các mặt bên đục lỗ trong University Red thêm một chút phong cách phù hợp để khiến bạn tỏa sáng. Tất nhiên, một số thứ không bao giờ thay đổi: Các thiết bị Nike Air vẫn đệm cho từng bước của bạn."
+    },
+    {
+      "id": 6,
+      "nameSaleProduct": "Nike Air Force 1 Shadow",
+      "imgSale": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1a7e3ec3-f556-460f-aa3e-24ec799ea8eb/air-force-1-shadow-shoes-C6jcPH.png",
+      "imgSub1": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/812f5a21-213b-4285-b00b-eb2d8638c0f8/air-force-1-shadow-shoes-C6jcPH.png",
+      "imgSub2": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4b7a61d4-6b47-40dc-a69f-af1a4a1f352d/air-force-1-shadow-shoes-C6jcPH.png",
+      "imgSub3": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/08638e12-a802-4772-8dad-7098dd83e809/air-force-1-shadow-shoes-C6jcPH.png",
+      "imgSub4": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c4e4d14a-ce16-4790-a676-a605c6f91434/air-force-1-shadow-shoes-C6jcPH.png",
+      "cost": 3829000,
+      "priceSale": 2680299,
+      "percentSale": 30,
+      "describe": "Làm cho mỗi bước trở nên độc đáo. Những cú đá này tạo ra một sự thay đổi vui tươi cho biểu tượng vòng bằng cách nhân đôi mọi thứ bạn yêu thích về AF-1. Các vật liệu nhiều lớp như vải dệt gợi cảm bằng vải lanh và da tổng hợp kết hợp với đế giữa phóng đại và một chút phấn màu để mang đến cho bạn phong cách gấp đôi."
+    },
+    {
+      "id": 7,
+      "nameSaleProduct": "Nike Dunk High Retro",
+      "imgSale": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/cec5acec-f53e-40a1-80b5-a21ddb4267dc/dunk-high-retro-shoes-Cg1ncq.png",
+      "imgSub1": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/49d0bcf4-6483-4f89-8fc3-387a7fdbf1de/dunk-high-retro-shoes-Cg1ncq.png",
+      "imgSub2": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c8f6962d-8e40-4d44-a507-1c732a906bc7/dunk-high-retro-shoes-Cg1ncq.png",
+      "imgSub3": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f77673a3-5775-4dcb-960a-55f06e431e42/dunk-high-retro-shoes-Cg1ncq.png",
+      "imgSub4": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/da819d85-e1ed-4e6c-9be0-b6af74664bc0/dunk-high-retro-shoes-Cg1ncq.png",
+      "cost": 3369000,
+      "priceSale": 2863649,
+      "percentSale": 15,
+      "describe": "Nhận ra nguồn gốc của Dunk là đôi giày thể thao hàng đầu của đội đại học, Be True To Your School Pack tìm đến chiến dịch quảng cáo ban đầu để lấy cảm hứng. Màu sắc đại diện cho các trường đại học hàng đầu, trong khi các chi tiết thiết kế phục vụ sự tinh tế của vòng quay trở lại. Và lớp da sắc nét đó có độ bóng hoàn hảo để làm cho chúng trở thành một chiến thắng. Vì vậy, hãy thắt dây và thể hiện tinh thần varsity đó với sự kết hợp màu sắc gật đầu với đội yêu thích của bạn. Bạn có chơi game không?"
+    },
+    {
+      "id": 8,
+      "nameSaleProduct": "Nike Air Max 90",
+      "imgSale": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a9318f18-1625-4802-a0fd-a452bd9920c9/air-max-90-shoes-nLFl5V.png",
+      "imgSub1": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5792566f-1ed8-4db7-856c-e166f5eb835b/air-max-90-shoes-nLFl5V.png",
+      "imgSub2": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d7d9d17b-ca47-4fa7-a8bc-810e4adc3601/air-max-90-shoes-nLFl5V.png",
+      "imgSub3": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/15828d6a-ea8a-4636-862c-9acffcff32fb/air-max-90-shoes-nLFl5V.png",
+      "imgSub4": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a2cd2cf7-bc7b-4aa9-9c54-885e7ad128eb/air-max-90-shoes-nLFl5V.png",
+      "cost": 3829000,
+      "priceSale": 3254649,
+      "percentSale": 15,
+      "describe": "Thắt dây và cảm nhận di sản. Được sản xuất tại giao điểm của nghệ thuật, âm nhạc và văn hóa, đôi giày chạy bộ vô địch này đã giúp định hình những năm 90. Được mặc bởi các tổng thống, được cách mạng hóa thông qua các hợp tác và tôn vinh thông qua các màu sắc hiếm hoi, lớp đệm Nike Air lộ ra và đế ngoài Waffle giữ cho nó sống động và khỏe mạnh."
+    },
+    {
+      "id": 9,
+      "nameSaleProduct": "Nike Air Force 1 '07 LX",
+      "imgSale": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d61590e3-d59b-4a88-b03b-efed4a250fb7/air-force-1-07-lx-shoes-WHWbwl.png",
+      "imgSub1": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ba5bd1b3-2c20-4ca8-b9a5-e625be67ea0a/air-force-1-07-lx-shoes-WHWbwl.png",
+      "imgSub2": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/fdde9b2d-a355-47a9-a486-5bcf438a61c9/air-force-1-07-lx-shoes-WHWbwl.png",
+      "imgSub3": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/478f34e0-3e7d-460c-a06f-361c1b9178de/air-force-1-07-lx-shoes-WHWbwl.png",
+      "imgSub4": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d6f879ad-b4e5-4440-a005-7969018b37db/air-force-1-07-lx-shoes-WHWbwl.png",
+      "cost": 3829000,
+      "priceSale": 3254649,
+      "percentSale": 15,
+      "describe": "Mang theo tình yêu của bạn cho trò chơi với bạn bất cứ nơi nào bạn đi. Vượt qua sự thoải mái của gỗ cứng với sự tinh tế ngoài sân, những cú đá này tạo ra một vòng quay mới trên một chiếc vòng cổ điển với màu neon đã được rửa sạch và bản in paisley cổ điển. Tất nhiên, chúng tôi vẫn giữ nguyên cấu trúc thập niên 80 và các đơn vị Nike Air ẩn mà bạn biết và yêu thích cho cảm giác AF-1 huyền thoại đó. Đi trước, trượt vào một cú slam dunk."
+    },
+    {
+      "id": 10,
+      "nameSaleProduct": "Nike Dunk Low Disrupt 2",
+      "imgSale": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5129712e-8ab5-494e-942f-8efb0bd19730/dunk-low-disrupt-2-shoes-rmbZnK.png",
+      "imgSub1": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3b9fadaf-4ca3-4a31-9360-d412a77feaf3/dunk-low-disrupt-2-shoes-rmbZnK.png",
+      "imgSub2": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/cb8fd059-a688-4f8b-8d48-c957b3fe0d64/dunk-low-disrupt-2-shoes-rmbZnK.png",
+      "imgSub3": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/eb906516-9719-48a0-a7e8-196e0d470886/dunk-low-disrupt-2-shoes-rmbZnK.png",
+      "imgSub4": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/40bea417-3d3f-447a-96ca-fca53cb1b3c6/dunk-low-disrupt-2-shoes-rmbZnK.png",
+      "cost": 3239000,
+      "priceSale": 2753149,
+      "percentSale": 15,
+      "describe": "Tưởng tượng lại biểu tượng vòng đai thông qua lăng kính tự thể hiện bản thân, Dunk Low Disrupt 2 kết nối phong cách đã được thử nghiệm với thiết kế có thể tùy chỉnh. Đôi mắt đôi kết hợp với một dây giày đáy bù đắp (và một bộ dây buộc bổ sung) cho một sự thay đổi độc đáo cho phép bạn cá nhân hóa diện mạo của mình, trong khi lớp xếp lớp vui tươi và kết cấu tràn đầy năng lượng mỗi bước."
+    },
+    {
+      "id": 11,
+      "nameSaleProduct": "Nike Dunk Low",
+      "imgSale": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/67fcdb78-eda4-4aaa-885e-de5c585d729b/dunk-low-retro-shoes-bCzchX.png",
+      "imgSub1": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c5664e2d-2381-4bde-8de0-9caf0d51128a/dunk-low-retro-shoes-bCzchX.png",
+      "imgSub2": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/90dc0194-302b-46d3-a2ba-76de436004ef/dunk-low-retro-shoes-bCzchX.png",
+      "imgSub3": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a02d3401-a331-4e28-a666-e583a941f07d/dunk-low-retro-shoes-bCzchX.png",
+      "imgSub4": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9c152910-1dc3-480d-954d-a2cf7dd13725/dunk-low-retro-shoes-bCzchX.png",
+      "cost": 3519000,
+      "priceSale": 2991149,
+      "percentSale": 15,
+      "describe": "Được tạo ra cho gỗ cứng nhưng được đưa ra đường, biểu tượng bóng b thập niên 80 này trở lại với các chi tiết cổ điển và sự tinh tế của vòng ném lại. Lớp phủ da dẻo dai giúp kênh Nike Dunk mang phong cách cổ điển trong khi cổ áo có đệm, cắt thấp cho phép bạn mang trò chơi của mình đến bất cứ đâu - một cách thoải mái."
+    },
+    {
+      "id": 12,
+      "nameSaleProduct": "Nike Air Force 1 '07 SE",
+      "imgSale": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/dbbd0d12-9056-4020-a456-66aba378ed60/air-force-1-07-se-shoes-TgwW4b.png",
+      "imgSub1": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/abb82ee6-89e9-4fc6-8c2a-8b32624b6499/air-force-1-07-se-shoes-TgwW4b.png",
+      "imgSub2": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/165cd2b8-1f07-4a7e-9d9b-ee03c35c8df6/air-force-1-07-se-shoes-TgwW4b.png",
+      "imgSub3": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a0f6f601-3e82-453a-8e96-1b5344f30318/air-force-1-07-se-shoes-TgwW4b.png",
+      "imgSub4": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7648b280-4bd7-4a69-ab2b-e83df5b315f8/air-force-1-07-se-shoes-TgwW4b.png",
+      "cost": 3519000,
+      "priceSale": 2991149,
+      "percentSale": 15,
+      "describe": "Phù hợp với bạn, đánh vào câu lạc bộ, lùi lại những năm 2000 - AF-1 này mang lại sự ritz và hào nhoáng cho bất kỳ dịp nào. Bạc kim loại xuyên suốt mang đến cho bước đi của bạn một cạnh hiện đại, trong khi các điểm nhấn màu đen và đế ngoài đá giữ cho bạn bắt nguồn từ DNA vòng. Chúng ta có thể nói gì, kim loại ở trong (như thể nó đã từng rời đi."
+    }
+  ],
+  "sizeproduct": [
+    {
+      "idSize": 1,
+      "numberSize": "38"
+    },
+    {
+      "idSize": 2,
+      "numberSize": "39"
+    },
+    {
+      "idSize": 3,
+      "numberSize": "40"
+    },
+    {
+      "idSize": 4,
+      "numberSize": "41"
+    },
+    {
+      "idSize": 5,
+      "numberSize": "42"
+    },
+    {
+      "idSize": 6,
+      "numberSize": "43"
+    }
+  ],
+  "quantityproduct": [
+    {
+      "id": 1,
+      "idSize": 1,
+      "idProduct": 1,
+      "quantity": 0
+    },
+    {
+      "id": 2,
+      "idSize": 2,
+      "idProduct": 1,
+      "quantity": 0
+    },
+    {
+      "id": 3,
+      "idSize": 3,
+      "idProduct": 1,
+      "quantity": 12
+    },
+    {
+      "id": 4,
+      "idSize": 4,
+      "idProduct": 1,
+      "quantity": 12
+    },
+    {
+      "id": 5,
+      "idSize": 5,
+      "idProduct": 1,
+      "quantity": 0
+    },
+    {
+      "id": 6,
+      "idSize": 6,
+      "idProduct": 1,
+      "quantity": 12
+    },
+    {
+      "id": 7,
+      "idSize": 1,
+      "idProduct": 2,
+      "quantity": 12
+    },
+    {
+      "id": 8,
+      "idSize": 2,
+      "idProduct": 2,
+      "quantity": 0
+    },
+    {
+      "id": 9,
+      "idSize": 3,
+      "idProduct": 2,
+      "quantity": 12
+    },
+    {
+      "id": 10,
+      "idSize": 4,
+      "idProduct": 2,
+      "quantity": 12
+    },
+    {
+      "id": 11,
+      "idSize": 5,
+      "idProduct": 2,
+      "quantity": 0
+    },
+    {
+      "id": 12,
+      "idSize": 6,
+      "idProduct": 2,
+      "quantity": 12
+    },
+    {
+      "id": 13,
+      "idSize": 1,
+      "idProduct": 3,
+      "quantity": 12
+    },
+    {
+      "id": 14,
+      "idSize": 2,
+      "idProduct": 3,
+      "quantity": 12
+    },
+    {
+      "id": 15,
+      "idSize": 3,
+      "idProduct": 3,
+      "quantity": 0
+    },
+    {
+      "id": 16,
+      "idSize": 4,
+      "idProduct": 3,
+      "quantity": 0
+    },
+    {
+      "id": 17,
+      "idSize": 5,
+      "idProduct": 3,
+      "quantity": 12
+    },
+    {
+      "id": 18,
+      "idSize": 6,
+      "idProduct": 3,
+      "quantity": 12
+    },
+    {
+      "id": 19,
+      "idSize": 1,
+      "idProduct": 4,
+      "quantity": 0
+    },
+    {
+      "id": 20,
+      "idSize": 2,
+      "idProduct": 4,
+      "quantity": 12
+    },
+    {
+      "id": 21,
+      "idSize": 3,
+      "idProduct": 4,
+      "quantity": 0
+    },
+    {
+      "id": 22,
+      "idSize": 4,
+      "idProduct": 4,
+      "quantity": 12
+    },
+    {
+      "id": 23,
+      "idSize": 5,
+      "idProduct": 4,
+      "quantity": 0
+    },
+    {
+      "id": 24,
+      "idSize": 6,
+      "idProduct": 4,
+      "quantity": 12
+    },
+    {
+      "id": 26,
+      "idSize": 1,
+      "idProduct": 5,
+      "quantity": 0
+    },
+    {
+      "id": 27,
+      "idSize": 2,
+      "idProduct": 5,
+      "quantity": 12
+    },
+    {
+      "id": 28,
+      "idSize": 3,
+      "idProduct": 5,
+      "quantity": 0
+    },
+    {
+      "id": 29,
+      "idSize": 4,
+      "idProduct": 5,
+      "quantity": 12
+    },
+    {
+      "id": 30,
+      "idSize": 5,
+      "idProduct": 5,
+      "quantity": 12
+    },
+    {
+      "id": 31,
+      "idSize": 6,
+      "idProduct": 5,
+      "quantity": 0
+    },
+    {
+      "id": 32,
+      "idSize": 1,
+      "idProduct": 6,
+      "quantity": 12
+    },
+    {
+      "id": 33,
+      "idSize": 2,
+      "idProduct": 6,
+      "quantity": 12
+    },
+    {
+      "id": 34,
+      "idSize": 3,
+      "idProduct": 6,
+      "quantity": 0
+    },
+    {
+      "id": 35,
+      "idSize": 4,
+      "idProduct": 6,
+      "quantity": 0
+    },
+    {
+      "id": 36,
+      "idSize": 5,
+      "idProduct": 6,
+      "quantity": 12
+    },
+    {
+      "id": 37,
+      "idSize": 6,
+      "idProduct": 6,
+      "quantity": 0
+    },
+    {
+      "id": 38,
+      "idSize": 1,
+      "idProduct": 7,
+      "quantity": 0
+    },
+    {
+      "id": 39,
+      "idSize": 2,
+      "idProduct": 7,
+      "quantity": 12
+    },
+    {
+      "id": 40,
+      "idSize": 3,
+      "idProduct": 7,
+      "quantity": 12
+    },
+    {
+      "id": 41,
+      "idSize": 4,
+      "idProduct": 7,
+      "quantity": 0
+    },
+    {
+      "id": 42,
+      "idSize": 5,
+      "idProduct": 7,
+      "quantity": 12
+    },
+    {
+      "id": 43,
+      "idSize": 6,
+      "idProduct": 7,
+      "quantity": 12
+    },
+    {
+      "id": 44,
+      "idSize": 1,
+      "idProduct": 8,
+      "quantity": 0
+    },
+    {
+      "id": 45,
+      "idSize": 2,
+      "idProduct": 8,
+      "quantity": 12
+    },
+    {
+      "id": 46,
+      "idSize": 3,
+      "idProduct": 8,
+      "quantity": 12
+    },
+    {
+      "id": 47,
+      "idSize": 4,
+      "idProduct": 8,
+      "quantity": 0
+    },
+    {
+      "id": 48,
+      "idSize": 5,
+      "idProduct": 8,
+      "quantity": 12
+    },
+    {
+      "id": 49,
+      "idSize": 6,
+      "idProduct": 8,
+      "quantity": 0
+    },
+    {
+      "id": 50,
+      "idSize": 1,
+      "idProduct": 9,
+      "quantity": 12
+    },
+    {
+      "id": 51,
+      "idSize": 2,
+      "idProduct": 9,
+      "quantity": 12
+    },
+    {
+      "id": 52,
+      "idSize": 3,
+      "idProduct": 9,
+      "quantity": 0
+    },
+    {
+      "id": 53,
+      "idSize": 4,
+      "idProduct": 9,
+      "quantity": 12
+    },
+    {
+      "id": 54,
+      "idSize": 5,
+      "idProduct": 9,
+      "quantity": 0
+    },
+    {
+      "id": 55,
+      "idSize": 6,
+      "idProduct": 9,
+      "quantity": 12
+    },
+    {
+      "id": 56,
+      "idSize": 1,
+      "idProduct": 10,
+      "quantity": 0
+    },
+    {
+      "id": 57,
+      "idSize": 2,
+      "idProduct": 10,
+      "quantity": 12
+    },
+    {
+      "id": 58,
+      "idSize": 3,
+      "idProduct": 10,
+      "quantity": 12
+    },
+    {
+      "id": 59,
+      "idSize": 4,
+      "idProduct": 10,
+      "quantity": 0
+    },
+    {
+      "id": 60,
+      "idSize": 5,
+      "idProduct": 10,
+      "quantity": 12
+    },
+    {
+      "id": 61,
+      "idSize": 6,
+      "idProduct": 10,
+      "quantity": 0
+    },
+    {
+      "id": 62,
+      "idSize": 1,
+      "idProduct": 11,
+      "quantity": 12
+    },
+    {
+      "id": 63,
+      "idSize": 2,
+      "idProduct": 11,
+      "quantity": 12
+    },
+    {
+      "id": 64,
+      "idSize": 3,
+      "idProduct": 11,
+      "quantity": 0
+    },
+    {
+      "id": 65,
+      "idSize": 4,
+      "idProduct": 11,
+      "quantity": 12
+    },
+    {
+      "id": 66,
+      "idSize": 5,
+      "idProduct": 11,
+      "quantity": 0
+    },
+    {
+      "id": 67,
+      "idSize": 6,
+      "idProduct": 11,
+      "quantity": 12
+    },
+    {
+      "id": 68,
+      "idSize": 1,
+      "idProduct": 12,
+      "quantity": 0
+    },
+    {
+      "id": 69,
+      "idSize": 2,
+      "idProduct": 12,
+      "quantity": 12
+    },
+    {
+      "id": 70,
+      "idSize": 3,
+      "idProduct": 12,
+      "quantity": 0
+    },
+    {
+      "id": 71,
+      "idSize": 4,
+      "idProduct": 12,
+      "quantity": 0
+    },
+    {
+      "id": 72,
+      "idSize": 5,
+      "idProduct": 12,
+      "quantity": 12
+    },
+    {
+      "id": 73,
+      "idSize": 6,
+      "idProduct": 12,
+      "quantity": 0
+    }
+  ],
+  "cart": [
+    {
+      "userId": "admin",
+      "quantityId": "22",
+      "numberOrders": 12,
+      "id": 4
+    },
+    {
+      "userId": "testuser",
+      "quantityId": "57",
+      "numberOrders": 1,
+      "id": 7
+    },
+    {
+      "userId": "admin",
+      "quantityId": "27",
+      "numberOrders": 1,
+      "id": 8
+    },
+    {
+      "userId": "testuser",
+      "quantityId": "36",
+      "numberOrders": 3,
+      "id": 9
+    },
+    {
+      "userId": "testuser",
+      "quantityId": "63",
+      "numberOrders": 1,
+      "id": 10
+    },
+    {
+      "userId": "baokx12",
+      "quantityId": "17",
+      "numberOrders": 3,
+      "id": 14
+    },
+    {
+      "userId": "admin",
+      "quantityId": "24",
+      "numberOrders": 1,
+      "id": 15
+    },
+    {
+      "userId": "baokx12",
+      "quantityId": "6",
+      "numberOrders": 1,
+      "id": 16
+    },
+    {
+      "userId": "admin",
+      "quantityId": "39",
+      "numberOrders": 1,
+      "id": 17
+    },
+    {
+      "userId": "admin",
+      "quantityId": "7",
+      "numberOrders": 1,
+      "id": 18
+    },
+    {
+      "userId": "baokx12",
+      "quantityId": "14",
+      "numberOrders": 1,
+      "id": 19
+    },
+    {
+      "userId": "baokx12",
+      "quantityId": "14",
+      "numberOrders": 1,
+      "id": 20
+    },
+    {
+      "userId": "ntuser",
+      "quantityId": "7",
+      "numberOrders": 1,
+      "id": 21
+    },
+    {
+      "userId": "ntuser",
+      "quantityId": "18",
+      "numberOrders": 1,
+      "id": 22
+    },
+    {
+      "userId": "baokx12",
+      "quantityId": "3",
+      "numberOrders": 1,
+      "id": 23
+    },
+    {
+      "userId": "baokx12",
+      "quantityId": "10",
+      "numberOrders": 2,
+      "id": 24
+    }
+  ],
+  "comment": [
+    {
+      "id": 1,
+      "userId": "baokx12",
+      "vote": "5",
+      "dateTime": "1",
+      "content": "Đã mua hàng của rất nhiều shop khác nhau nhưng shop là mình thấy ưng ý nhất, sản phẩm đẹp shop lại rất thân thiện, tư vấn rất nhiệt tình. mình hơi kĩ tính nên hỏi shop hơi nhiều nhưngg shop rất thân thiện tư vấn mẫu cho mình, đặt mẫu nào về nhận hàng cũng đều rất hợp rất đúng ý mình luôn..😘😘😘😘😘"
+    }
+  ]
+}
