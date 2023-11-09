@@ -19,4 +19,9 @@ export class CommentService {
   AddNewComment(comments): Observable<Comment>{
     return this.httpClient.post<Comment>(this.https, comments)
   }
+
+  FindById(idProduct): Observable<any>{
+    return this.httpClient.get<any>(this.https + '/' + idProduct)
+  }
+
 }

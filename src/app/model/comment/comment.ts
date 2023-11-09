@@ -3,8 +3,8 @@ import { User } from "../user/user";
 
 export interface Comment{
     id?: number;
+    productId?: SaleProduct;
     userId?: User;
-    productId?: SaleProduct
     vote?: number;
     dateTime?: string;
     content?: string;

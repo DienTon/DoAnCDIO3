@@ -237,3 +237,16 @@ p {
 .order:hover::before {
     width: 100%;
 }
+
+.btn {
+    background-color: black;
+    color: white;
+    transition: all .3s;
+
+}
+
+.btn:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}

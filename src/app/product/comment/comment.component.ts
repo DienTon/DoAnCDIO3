@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { SaleProduct } from 'src/app/model/product/sale/saleproduct';
 import { CommentService } from 'src/app/service/comment-service/comment-service.service';
 import { SaleproductService } from 'src/app/service/sale-service/saleproduct.service';
@@ -14,16 +14,16 @@ import { SaleproductService } from 'src/app/service/sale-service/saleproduct.ser
 export class CommentComponent implements OnInit {
   cmtList: Comment[] = []
   saleList: SaleProduct[] = []
-  users: any
   commentForm: FormGroup;
   today: any = Date.now();
+  users: any
+  products: any
 
 
 
   constructor(
     private commentService: CommentService,
     private saleService: SaleproductService,
-    private formBuild: FormBuilder,
     private active: ActivatedRoute
   ) { }
 
@@ -31,6 +31,12 @@ export class CommentComponent implements OnInit {
     this.active.paramMap.subscribe(data => {
       this.users = data.get('id')
     })
+
+    this.active.paramMap.subscribe(data => {
+      this.products = data.get('id1')
+      console.log(this.products)
+    })
+
 
     this.commentService.GetAll().subscribe(data => {
       this.cmtList = data
@@ -40,12 +46,14 @@ export class CommentComponent implements OnInit {
       this.saleList = data
     })
 
+
     this.commentForm = new FormGroup(
       {
+        productId: new FormControl(this.products, [Validators.required]),
         userId: new FormControl(this.users, [Validators.required]),
         vote: new FormControl('', [Validators.required]),
         dateTime: new FormControl(this.today, [Validators.required]),
-        content: new FormControl('', [Validators.required]),
+        content: new FormControl('', [Validators.required])
       }
     )
   }
