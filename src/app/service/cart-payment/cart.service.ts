@@ -31,7 +31,6 @@ export class CartService {
     return this.httpClient.put(this.url + '/' + id, cart);
   }
 
-
   DeleteCart(id): Observable<Cart> {
     return this.httpClient.delete<Cart>(this.url + '/' + id);
   }

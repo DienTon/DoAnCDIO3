@@ -7,10 +7,7 @@
       "password": "Baokx12@",
       "email": "test@gmail.com",
       "role": "admin",
-      "isactive": true,
-      "address": {
-        "area": "chennai"
-      }
+      "isactive": true
     },
     {
       "id": "testuser",
@@ -19,7 +16,7 @@
       "password": "Baokx12@",
       "email": "test@in.com",
       "role": "user",
-      "isactive": false
+      "isactive": true
     },
     {
       "id": "Jhon1",
@@ -41,8 +38,8 @@
     },
     {
       "id": "baokx12",
-      "firstname": "Nguyễn ",
-      "name": "Trung Bảo",
+      "firstname": "Nguyễn",
+      "name": "Trung Bảo ",
       "password": "Baokx12@",
       "email": "baokx12@gmail.com",
       "role": "admin",
@@ -55,7 +52,7 @@
       "password": "Baokx12@",
       "email": "asdasda@gmail.com",
       "role": "user",
-      "isactive": false
+      "isactive": true
     },
     {
       "id": "isisisis",
@@ -798,74 +795,6 @@
       "quantity": 0
     }
   ],
-  "cart": [
-    {
-      "userId": "admin",
-      "quantityId": "22",
-      "numberOrders": 12,
-      "id": 4
-    },
-    {
-      "userId": "testuser",
-      "quantityId": "57",
-      "numberOrders": 1,
-      "id": 7
-    },
-    {
-      "userId": "admin",
-      "quantityId": "27",
-      "numberOrders": 1,
-      "id": 8
-    },
-    {
-      "userId": "testuser",
-      "quantityId": "36",
-      "numberOrders": 3,
-      "id": 9
-    },
-    {
-      "userId": "testuser",
-      "quantityId": "63",
-      "numberOrders": 1,
-      "id": 10
-    },
-    {
-      "userId": "admin",
-      "quantityId": "24",
-      "numberOrders": 1,
-      "id": 15
-    },
-    {
-      "userId": "admin",
-      "quantityId": "39",
-      "numberOrders": 1,
-      "id": 17
-    },
-    {
-      "userId": "admin",
-      "quantityId": "7",
-      "numberOrders": 1,
-      "id": 18
-    },
-    {
-      "userId": "ntuser",
-      "quantityId": "7",
-      "numberOrders": 1,
-      "id": 21
-    },
-    {
-      "userId": "ntuser",
-      "quantityId": "18",
-      "numberOrders": 1,
-      "id": 22
-    },
-    {
-      "userId": "baokx12",
-      "quantityId": "20",
-      "numberOrders": 1,
-      "id": 43
-    }
-  ],
   "comment": [
     {
       "productId": "3",
@@ -962,6 +891,209 @@
       "dateTime": 1699461642104,
       "content": "dc",
       "id": 12
+    },
+    {
+      "productId": "7",
+      "userId": "baokx12",
+      "vote": "5",
+      "dateTime": 1699627709908,
+      "content": "dep lam mng oi\n",
+      "id": 13
+    },
+    {
+      "productId": "2",
+      "userId": "admin",
+      "vote": "5",
+      "dateTime": 1699889402788,
+      "content": "ngon",
+      "id": 14
+    }
+  ],
+  "cart": [
+    {
+      "userId": "testuser",
+      "quantityId": "17",
+      "numberOrders": 1,
+      "id": 2
+    },
+    {
+      "userId": "baokx12",
+      "quantityId": "9",
+      "numberOrders": 1,
+      "id": 3
+    }
+  ],
+  "infopayment": [
+    {
+      "userId": "baokx12",
+      "phone": "0389056171",
+      "address": "Binh Trung, Thang Binh, Quang nam",
+      "note": "oke",
+      "datePayment": 1699808696987,
+      "status": "1",
+      "id": 1
+    },
+    {
+      "userId": "admin",
+      "phone": "0329002453",
+      "address": "Nguyen Minh Chan, Lien Chieu, Da Nang",
+      "note": "oke",
+      "datePayment": 1699808739934,
+      "status": "0",
+      "id": 2
+    },
+    {
+      "userId": "testuser",
+      "phone": "03912312312",
+      "address": "ádasdasd",
+      "note": "ádasdasdasdas",
+      "datePayment": 1699889278917,
+      "status": "1",
+      "id": 6
+    },
+    {
+      "userId": "Jhon1",
+      "phone": "áda",
+      "address": "ádasd",
+      "note": "ádasd",
+      "datePayment": 1699890265575,
+      "status": "0",
+      "id": 7
+    }
+  ],
+  "history": [
+    {
+      "userId": "baokx12",
+      "quantityId": "17",
+      "numberOrders": 1,
+      "infoId": 1,
+      "id": 1
+    },
+    {
+      "userId": "baokx12",
+      "quantityId": "17",
+      "numberOrders": 1,
+      "infoId": 1,
+      "id": 2
+    },
+    {
+      "userId": "admin",
+      "quantityId": "17",
+      "numberOrders": 1,
+      "infoId": 2,
+      "id": 3
+    },
+    {
+      "userId": "admin",
+      "quantityId": "36",
+      "numberOrders": 1,
+      "infoId": 2,
+      "id": 4
+    },
+    {
+      "userId": "admin",
+      "quantityId": "27",
+      "numberOrders": 1,
+      "infoId": 2,
+      "id": 5
+    },
+    {
+      "userId": "baokx12",
+      "quantityId": "17",
+      "numberOrders": 1,
+      "infoId": 3,
+      "id": 6
+    },
+    {
+      "userId": "Jhon1",
+      "quantityId": "33",
+      "numberOrders": 1,
+      "infoId": 4,
+      "id": 7
+    },
+    {
+      "userId": "Jhon1",
+      "quantityId": "30",
+      "numberOrders": 1,
+      "infoId": 4,
+      "id": 8
+    },
+    {
+      "userId": "Jhon1",
+      "quantityId": "67",
+      "numberOrders": 3,
+      "infoId": 4,
+      "id": 9
+    },
+    {
+      "userId": "Jhon1",
+      "quantityId": "24",
+      "numberOrders": 1,
+      "infoId": 4,
+      "id": 10
+    },
+    {
+      "userId": "Jhon1",
+      "quantityId": "57",
+      "numberOrders": 1,
+      "infoId": 4,
+      "id": 11
+    },
+    {
+      "userId": "Jhon1",
+      "quantityId": "10",
+      "numberOrders": 1,
+      "infoId": 4,
+      "id": 12
+    },
+    {
+      "userId": "Jhon1",
+      "quantityId": "40",
+      "numberOrders": 1,
+      "infoId": 4,
+      "id": 13
+    },
+    {
+      "userId": "baobaokxkx",
+      "quantityId": "42",
+      "numberOrders": 3,
+      "infoId": 5,
+      "id": 14
+    },
+    {
+      "userId": "baobaokxkx",
+      "quantityId": "10",
+      "numberOrders": 1,
+      "infoId": 5,
+      "id": 15
+    },
+    {
+      "userId": "testuser",
+      "quantityId": "7",
+      "numberOrders": 2,
+      "infoId": 6,
+      "id": 16
+    },
+    {
+      "userId": "testuser",
+      "quantityId": "17",
+      "numberOrders": 1,
+      "infoId": 6,
+      "id": 17
+    },
+    {
+      "userId": "Jhon1",
+      "quantityId": "27",
+      "numberOrders": 3,
+      "infoId": 7,
+      "id": 18
+    },
+    {
+      "userId": "Jhon1",
+      "quantityId": "42",
+      "numberOrders": 1,
+      "infoId": 7,
+      "id": 19
     }
   ]
 }

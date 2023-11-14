@@ -16,32 +16,32 @@
       <div class="info-orders">
         <h5>Thông tin giao hàng</h5>
         <div class="info-person">
-          <form [formGroup]="information" class="row g-3" style="padding-bottom: 16px;">
+          <form [formGroup]="information" class="row g-3" style="padding-bottom: 16px;" (ngSubmit)="updateInfo()">
             <div class="user-box col-md-4">
               <label>Họ:</label>
-              <input class="form-control" formControlName="firstname" type="text" name="" required="">
+              <input class="form-control" formControlName="firstname" type="text" required="">
             </div>
             <div class="user-box col-md-8">
               <label>Tên:</label>
-              <input class="form-control" formControlName="name" type="text" name="" required="">
+              <input class="form-control" formControlName="name" type="text" required="">
             </div>
             <div class="user-box col-md-12">
               <label>Email:</label>
-              <input class="form-control" formControlName="email" type="email" name="" required="">
+              <input class="form-control" formControlName="email" type="email" required="">
             </div>
           </form>
-          <form [formGroup]="addInfo" class="row g-3">
+          <form [formGroup]="addInfo" class="row g-3" (ngSubmit)="addNewInfo()">
             <div class="user-box col-md-12">
-              <label>Số Điện Thoại:</label>
-              <input class="form-control" type="text" name="" required="">
+              <label for="phone">Số Điện Thoại Người Nhận:</label>
+              <input formControlName="phone" class="form-control" type="text" required="">
             </div>
             <div class="user-box col-md-12">
-              <label>Địa Chỉ:</label>
-              <input class="form-control" type="text" name="" required="">
+              <label for="address">Địa Chỉ Giao Hàng:</label>
+              <input formControlName="address" class="form-control" type="text" required="">
             </div>
             <div class="user-box col-md-12">
-              <label>Ghi Chú:</label>
-              <textarea class="form-control"></textarea>
+              <label for="note">Ghi Chú:</label>
+              <textarea formControlName="note" class="form-control"></textarea>
             </div>
             <div class="user-box col-md-12">
               <label>Phương Thức Thanh Toán:</label>
@@ -55,6 +55,7 @@
               <button type="submit" class="btn">Hoàn Tất Đơn Hàng</button>
             </div>
           </form>
+         
         </div>
       </div>
     </div>

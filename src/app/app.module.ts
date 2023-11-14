@@ -7,7 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './home/navigation/navigation.component';
-import { InfoAcountComponent } from './auth/info-acount/info-acount.component';
+import { InfoAcountComponent } from './admin/info-acount/info-acount.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { AddCartComponent } from './cart/add-cart/add-cart.component';
@@ -19,6 +19,7 @@ import { SlideComponent } from './home/slide/slide.component';
 import { SaleDetailComponent } from './product/sale/sale-detail/sale-detail.component';
 import { SaleProductComponent } from './product/sale/sale-product/sale-product.component';
 import { CommentComponent } from './product/comment/comment.component';
+import { OrderManagementComponent } from './admin/order-management/order-management.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CommentComponent } from './product/comment/comment.component';
     AddCartComponent,
     InfoAcountComponent,
     CommentComponent,
+    OrderManagementComponent,
   ],
   imports: [
     BrowserModule,

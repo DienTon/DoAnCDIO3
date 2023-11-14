@@ -28,8 +28,8 @@ export class NavigationComponent implements OnInit {
     script.src = 'assets/js/index2.js';
     this.renderer.appendChild(document.body, script);
 
-    this.active.paramMap.subscribe(data => {
-      this.users = data.get('id')
+    this.active.params.subscribe(params => {
+      this.users = params['id'];
     })
   }
 

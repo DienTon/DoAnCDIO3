@@ -41,9 +41,9 @@
             <li>Giảm Giá</li>
             <li *ngIf="isadmin" class="manager">Quản Lý <i class="fa-solid fa-chevron-down arrow"></i>
                 <div class="nav_item-manager d-flex flex-column">
-                    <a routerLink="/account">Tài Khoản</a>
+                    <a routerLink="/account/{{users}}">Tài Khoản</a>
+                    <a routerLink="/order/{{users}}">Đơn Hàng</a>
                     <a href="">Sản Phẩm</a>
-                    <a href="">Đơn Hàng</a>
                     <a href="">Thu Nhập</a>
                     <a href="">Phản Hồi</a>
                 </div>

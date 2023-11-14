@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { SaleProduct } from 'src/app/model/product/sale/saleproduct';
 import { SaleproductService } from 'src/app/service/sale-service/saleproduct.service';
 import { SizeProduct } from '../../model/product/sale/sizeproduct';
@@ -8,8 +8,11 @@ import { QuantitySaleService } from '../../service/sale-service/quantity-sale-se
 import { SizeproductService } from '../../service/sale-service/sizeproduct.service';
 import { CartService } from 'src/app/service/cart-payment/cart.service';
 import { Cart } from 'src/app/model/cart-payment/cart';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/service/auth-service/auth.service';
+import { PaymentService } from '../../service/cart-payment/payment.service';
+import { User } from 'src/app/model/user/user';
+import { HistoryService } from 'src/app/service/cart-payment/history.service';
 
 @Component({
   selector: 'app-payment-product',
@@ -21,52 +24,36 @@ export class PaymentProductComponent implements OnInit {
   saleList: SaleProduct[] = [];
   sizeList: SizeProduct[] = [];
   quantityList: QuantityProduct[] = [];
-  carts: any;
   users: any;
-  information: FormGroup
-  addInfo: FormGroup
+  info: User;
+  information: FormGroup;
+  addInfo: FormGroup;
+  today: any = Date.now();
 
   constructor(
     private cartService: CartService,
     private saleService: SaleproductService,
     private sizeService: SizeproductService,
     private authService: AuthService,
+    private hisService: HistoryService,
+    private paymentService: PaymentService,
     private quantityService: QuantitySaleService,
     private active: ActivatedRoute,
-    private builder: FormBuilder
+    private builder: FormBuilder,
+    private router: Router,
   ) {
-    // this.information = this.builder.group({
-    //   id: [''],
-    //   firstname: [''],
-    //   name: [''],
-    //   password: [''],
-    //   email: [''],
-    //   role: ['', Validators.required],
-    //   isactive: []
-    // })
+    this.information = this.builder.group({
+      id: [''],
+      firstname: [''],
+      name: [''],
+      password: [''],
+      email: [''],
+      role: ['', Validators.required],
+      isactive: []
+    })
   }
 
   ngOnInit(): void {
-
-
-    // this.route.queryParams.subscribe(params => {
-    //   const saleP = params['saleProductId'];
-    //   const quantityP = params['quantityProductId'];
-
-    this.active.paramMap.subscribe(data => {
-      this.users = data.get('id')
-      this.authService.GetIdRole(this.users).subscribe((res: any) => {
-        this.information.patchValue({
-          id: res.id,
-          firstname: res.firstname,
-          name: res.name,
-          password: res.password,
-          email: res.email,
-          role: res.role,
-          isactive: res.isactive,
-        })
-      })
-    })
 
     this.cartService.Getall().subscribe(data => {
       this.cartList = data;
@@ -84,6 +71,29 @@ export class PaymentProductComponent implements OnInit {
       this.sizeList = data;
     })
 
+    this.active.paramMap.subscribe(data => {
+      this.users = data.get('id')
+      this.authService.GetIdRole(this.users).subscribe((res: any) => {
+        this.information.patchValue({
+          id: res.id,
+          firstname: res.firstname,
+          name: res.name,
+          password: res.password,
+          email: res.email,
+          role: res.role,
+          isactive: res.isactive,
+        })
+      })
+    })
+
+    this.addInfo = new FormGroup({
+      userId: new FormControl(this.users, [Validators.required]),
+      phone: new FormControl('', [Validators.required]),
+      address: new FormControl('', [Validators.required]),
+      note: new FormControl('', [Validators.required]),
+      datePayment: new FormControl(this.today, [Validators.required]),
+      status: new FormControl('0', [Validators.required]),
+    })
   }
 
   total() {
@@ -106,6 +116,41 @@ export class PaymentProductComponent implements OnInit {
     return total;
   }
 
+  addNewInfo() {
+    if (this.addInfo.invalid || this.information.invalid) {
+      alert("Vui lòng nhập thông tin");
+    } else if (this.total() == 0) {
+      alert('Bạn chưa có đơn hàng nào cần thanh toán')
+    } else {
+      this.paymentService.addInfo(this.addInfo.value).subscribe(data => {
+        for (let items of this.cartList) {
+          if (items.userId == this.users) {
+            const historyItem = {
+              userId: items.userId,
+              quantityId: items.quantityId,
+              numberOrders: items.numberOrders,
+              infoId: data.id,
+            };
+            this.hisService.AddOrders(historyItem).subscribe(data => {
+            });
+            this.cartService.DeleteCart(items.id).subscribe(data =>{
+            })
+          }
+        }
+
+        this.updateInfo();
+        this.router.navigate(['/home', this.users],{
+        })
+        alert('Thành công');
+
+      });
+    }
+  }
+
+  updateInfo() {
+    this.authService.updateuser(this.users, this.information.value).subscribe(res => {
+    })
+  }
 
 }
 
